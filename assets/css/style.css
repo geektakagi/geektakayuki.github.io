@@ -5,9 +5,15 @@
 
 html {
   line-height: 1.5;
-  font-family: "Roboto", sans-serif;
+  font-family: 'Roboto', 'Noto Sans JP', 'M PLUS 1p', sans-serif;
   font-weight: normal;
+  letter-spacing: 0.15rem;
   color: rgba(0, 0, 0, 0.87);
+}
+
+.card, .side-nav {
+  -webkit-box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+          box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
 }
 
 a {
@@ -16,6 +22,11 @@ a {
 
 li {
   list-style: none;
+}
+
+h1 {
+  font-family: 'Noto Sans JP', sans-serif;
+  letter-spacing: 0.3rem;
 }
 
 h3 {
@@ -45,8 +56,10 @@ nav {
   height: 0;
   color: #101010;
 }
+
 nav ul {
-  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+  -webkit-box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+          box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
 }
 
 .side-nav {
@@ -60,13 +73,21 @@ nav ul {
   width: 320px;
 }
 
+.side-nav li:hover:nth-of-type(n+2) {
+  border-left: #008073 solid;
+  background-color: #EEE;
+  -webkit-transition: ease-in-out 0.3s;
+  transition: ease-in-out 0.3s;
+}
+
 .fixed {
   left: 0;
   position: fixed;
 }
 
 ul a {
-  box-sizing: content-box;
+  -webkit-box-sizing: content-box;
+          box-sizing: content-box;
   color: #444;
   display: block;
   line-height: 100%;
@@ -87,12 +108,29 @@ main {
   position: relative;
 }
 
+.container {
+  width: calc(95% - 3rem);
+  margin: auto;
+  padding: 0 3rem;
+}
+
+.page-title {
+  background-color: #008073;
+  color: #FFFFFF;
+}
+
 #intro.section {
   background: url("../img/top.jpg") no-repeat top center/cover;
   position: relative;
 }
 
+#intro.section .container {
+  top: 10px;
+  position: absolute;
+}
+
 .overlay {
+  display: block;
   background-color: rgba(0, 0, 0, 0.25);
   height: 100%;
   left: 0;
@@ -104,23 +142,29 @@ main {
 .logo {
   background-color: #fafafa;
   border-bottom: 1px solid #ddd;
-  box-sizing: content-box;
+  -webkit-box-sizing: content-box;
+          box-sizing: content-box;
   min-height: 90px;
-  padding: 30px 30px 40px;
+  padding: 30px 30px;
 }
+
 .logo h1 {
-  font-size: 2rem;
+  font-size: 2.75rem;
+  padding-bottom: 0.75rem;
 }
 
-.container {
-  width: 95%;
-  margin: auto;
-  padding: 3rem;
+.logo p {
+  line-height: 1.25rem;
 }
 
-.page-title {
-  background-color: #008073;
-  color: #FFFFFF;
+.card {
+  position: relative;
+  overflow: hidden;
+  margin: 0.5rem 0 1rem 0;
+  background-color: #fff;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  border-radius: 2px;
+  background-clip: padding-box;
 }
-
 /*# sourceMappingURL=style.css.map */
